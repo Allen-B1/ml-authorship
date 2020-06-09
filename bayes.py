@@ -14,18 +14,4 @@ clf = Pipeline([
 
 clf.fit(data.train_x, data.train_y)
 acc = np.mean(clf.predict(data.test_x) == data.test_y)
-
-if __name__ == "__main__":
-    print ("acc=%f%%" % (acc*100))
-    print ("---")
-
-    msgs = []
-    while True:
-        msg = input("")
-        if msg == "":
-            break
-        msgs.append(msg)
-
-    indexes = clf.predict(msgs)
-    for msg, index in zip(msgs, indexes):
-        print("'%s' => %s" % (msg, data.author_names[index]))
+print ("acc=%f%%" % (acc*100))
