@@ -5,9 +5,9 @@ author_names = list(data.keys())
 
 values = []
 for author, messages in data.items():
-    index = author_names.index(author)
-    for msg in messages:
-        values.append([msg, index])
+	index = author_names.index(author)
+	for msg in messages:
+		values.append([msg, index])
 
 import random
 random.shuffle(values)
@@ -20,3 +20,4 @@ train_x = values_x[:cutoff]
 train_y = values_y[:cutoff]
 test_x = values_x[cutoff:]
 test_y = values_y[cutoff:]
+
