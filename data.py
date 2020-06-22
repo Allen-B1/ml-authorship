@@ -15,7 +15,7 @@ random.shuffle(values)
 values_x = [i[0] for i in values]
 values_y = [i[1] for i in values]
 
-cutoff = int(len(values_x) * 2 / 3)
+cutoff = int(len(values_x) * 1 / 2)
 train_x = values_x[:cutoff]
 train_y = values_y[:cutoff]
 test_x = values_x[cutoff:]
